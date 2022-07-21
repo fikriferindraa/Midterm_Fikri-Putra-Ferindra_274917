@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['session_id'])) {
-        echo "<script>alert('Session not available.please Login');</script>";
-        echo "<script> window.location.replace('../loginpage.php');</script>";
-    }
+    // session_start();
+    // if (!isset($_SESSION['session_id'])) {
+    //     echo "<script>alert('Session not available.please Login');</script>";
+    //     echo "<script> window.location.replace('loginpage.php');</script>";
+    // }
 
     if (isset($_POST["submit"])) {
         $email = $_POST["email"];
@@ -29,7 +29,7 @@
             echo "<script> window.location.replace('index.php')</script>";
         }else{
              echo "<script>alert('Login Failed');</script>";
-             echo "<script> window.location.replace('login.php')</script>";
+             echo "<script> window.location.replace('loginpage.php')</script>";
         }
     }
 ?>

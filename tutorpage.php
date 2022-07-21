@@ -30,7 +30,29 @@
         <p style="font-size:calc(8px+1vw); margin-top:0;">Best to Help You Understanding</p>
     </div>
 
-    <div class="w3-grid-template">
+    <a href="index.php">Back to Home</a>
+
+    <div class="w3-card w3-container w3-padding w3-margin w3-round">
+        <h3>Product Search</h3>
+        <form>
+            <div class="w3-row">
+                <div class="w3-half">
+                    <input class="w3-input w3-block w3-round w3-border" type="search" name="search"
+                        placeholder="Enter Search Term"></input>
+                </div>
+                <div class="w3-half">
+                    <select class="w3-input w3-block w3-round w3-border" name="option">
+                        <option value="name">By Product Name</option>
+                        <option value="ic">By Type</option>
+                    </select>
+                </div>
+            </div>
+            <button class="w3-button w3-green w3-round w3-right" type="submit" name="search"
+                value="search">Search</button>
+        </form>
+    </div>
+
+    <div class="w3-grid-template w3-cell-middle" style="width:50%; margin:auto">
         <?php
         $i=0;
         foreach ($rows as $tutor) {
@@ -44,8 +66,8 @@
             echo "<header class='w3-container w3-blue'>";
             echo "<h5>$name</h5>";
             echo "</header>";
-            echo "<img class='w3-image' src=../../assets/tutors/$id.jpg" . 
-                " onerror=this.onerror=null;this.src='../../assets/error/error-image.png'"
+            echo "<img class='w3-image' src=assets/tutors/$id.jpg" . 
+                " onerror=this.onerror=null;this.src='assets/error/error-image.png'"
                 . " style='width:100%;height:500px'>";
             echo "<div class='w3-container w3-left-align'><hr>";
             echo "<p><i class='fa fa-id-card' style='font-size:16px'></i>&nbsp&nbsp$id<br>
@@ -58,8 +80,6 @@
 
         ?>
     </div>
-
-    <a href="index.php">back</a>
 
     <footer class="w3-container w3-green w3-center">Copyright@2022 MyTutor</footer>
 </body>
